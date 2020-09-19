@@ -14,7 +14,7 @@ type Provider struct {
 func NewProvider(name string, generator provider.ScriptFunction) Provider {
 	return Provider{
 		Name: name,
-		Operations: map[string]string,
+		Operations: make(map[string]Operation),
 		ScriptGenerator: generator,
 	}
 }
