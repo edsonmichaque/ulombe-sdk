@@ -11,10 +11,10 @@ type Provider struct {
     ScriptGenerator provider.ScriptFunction
 }
 
-func NewProvider(name string, generator provider.ScriptGeneratorFunc) Provider {
+func NewProvider(name string, generator provider.ScriptFunction) Provider {
 	return Provider{
 		Name: name,
-		Operations: []string{},
+		Operations: map[string]string,
 		ScriptGenerator: generator,
 	}
 }
