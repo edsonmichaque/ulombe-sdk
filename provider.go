@@ -8,7 +8,7 @@ type Provider struct {
     Name string
     Resource string
     Operations map[string]provider.Operation
-    ScriptGenerator provider.ScriptGeneratorFunc
+    ScriptGenerator provider.ScriptFunction
 }
 
 func NewProvider(name string, generator provider.ScriptGeneratorFunc) Provider {
