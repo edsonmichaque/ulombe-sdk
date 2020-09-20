@@ -6,13 +6,6 @@ type Operation struct {
     Attributes map[string]Attribute
 }
 
-func NewOperation(name string, aliases []string) Operation {
-        return Operation{
-                Name: name,
-                Aliases: aliases,
-        }
-}
-
 func NewOperation(name string, aliases []string, map[string]Attribute attributes) Operation {
 	return Operation{
 		Name: name,
