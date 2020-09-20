@@ -13,6 +13,14 @@ func NewOperation(name string, aliases []string) Operation {
         }
 }
 
+func NewOperation(name string, aliases []string, map[string]Attribute attributes) Operation {
+	return Operation{
+		Name: name,
+		Aliases: aliases,
+		Attributes: attributes,
+	}
+}
+
 func (o Operation) AddAttribute(a Attribute) {
         o.Attributes[a.Name] = a
 }
